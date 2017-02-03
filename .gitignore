@@ -44,3 +44,4 @@ core/phpcs.xml
 core/phpunit.xml
 .idea/
 temp
+dump.sql
