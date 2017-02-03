@@ -1,4 +1,9 @@
-(function($, moduleName) {
+/**
+ * @file
+ * Managed File.
+ */
+
+(function ($, moduleName) {
   'use strict';
 
   /**
@@ -56,17 +61,15 @@
    * @param {Function} [success]
    *   Callback for execution when all were done.
    */
-  ManagedFile.prototype.process = function(uri, element, success) {
-    this.getFIDByURI(uri, function(fid) {
+  ManagedFile.prototype.process = function (uri, element, success) {
+    this.getFIDByURI(uri, function (fid) {
       var $container = $($(element).data('target'));
 
       if ($container.length > 0) {
         $container.children('[type=hidden]').val(fid);
         $container.children('[type=submit]').mousedown();
 
-        if (success instanceof Function) {
-          success(fid);
-        }
+        success instanceof Function && success(fid);
       }
     });
   };
@@ -77,8 +80,8 @@
    * @param {String} uri
    * @param {Function} callback
    */
-  ManagedFile.prototype.getFIDByURI = function(uri, callback) {
-    $.get(Drupal.settings.basePath + moduleName + '/get_fid_by_uri', {uri: uri}, function(fid) {
+  ManagedFile.prototype.getFIDByURI = function (uri, callback) {
+    $.get(Drupal.settings.basePath + moduleName + '/get_fid_by_uri', {uri: uri}, function (fid) {
       if (fid > 0) {
         callback(fid);
       }
@@ -93,7 +96,7 @@
    * @param {Function} callback
    *   Processing callback.
    */
-  ManagedFile.implement = function(fileManager, callback) {
+  ManagedFile.implement = function (fileManager, callback) {
     // Generate unique name for this implementation depending on manager name.
     var implementation = moduleName + '_' + fileManager;
     // CSS selector of fields that need to be extended by file manager.
@@ -103,8 +106,8 @@
     var regexp = new RegExp('.*' + className + ' (\\w+).*', 'g');
 
     Drupal.behaviors[implementation] = {
-      attach: function(context, settings) {
-        $(context).find('.' + className).once().each(function() {
+      attach: function (context, settings) {
+        $(context).find('.' + className).once().each(function () {
           var $element = $(this);
 
           if (!$element.find('.file').length) {
@@ -113,7 +116,7 @@
             manager = $.extend(manager, settings[this.className.replace(regexp, '$1')]);
             manager.fileManagerID = implementation;
 
-            $element.before($('<span class="pseudo-link" data-target="#' + this.id + '">' + Drupal.t('Browse files') + '</span>').bind('click', function() {
+            $element.before($('<span class="pseudo-link" data-target="#' + this.id + '">' + Drupal.t('Browse files') + '</span>').bind('click', function () {
               callback(manager, this);
             }));
           }

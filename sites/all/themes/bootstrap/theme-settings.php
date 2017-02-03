@@ -17,8 +17,7 @@ bootstrap_include('bootstrap', 'includes/cdn.inc');
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function bootstrap_form_system_theme_settings_alter(&$form, $form_state, $form_id = NULL)
-{
+function bootstrap_form_system_theme_settings_alter(&$form, $form_state, $form_id = NULL) {
   // Do not add Bootstrap specific settings to non-bootstrap based themes,
   // including a work-around for a core bug affecting admin themes.
   // @see https://drupal.org/node/943212
@@ -54,7 +53,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, $form_state, $form_i
   $form['bootstrap'] = array(
     '#type' => 'vertical_tabs',
     '#attached' => array(
-      'js' => array(drupal_get_path('theme', 'bootstrap') . '/js/bootstrap.admin.js'),
+      'js'  => array(drupal_get_path('theme', 'bootstrap') . '/js/bootstrap.admin.js'),
     ),
     '#prefix' => '<h2><small>' . t('Bootstrap Settings') . '</small></h2>',
     '#weight' => -10,
@@ -247,7 +246,8 @@ function bootstrap_form_system_theme_settings_alter(&$form, $form_state, $form_i
       '!enable' => url('admin/modules', array('fragment' => 'edit-modules-path-breadcrumbs')),
       '!settings' => url('admin/structure/path-breadcrumbs/settings'),
     ));
-  } else {
+  }
+  else {
     $form['components']['breadcrumbs']['#collapsible'] = TRUE;
     $form['components']['breadcrumbs']['#collapsed'] = TRUE;
     $form['components']['breadcrumbs']['bootstrap_breadcrumb'] = array(
@@ -619,59 +619,6 @@ function bootstrap_form_system_theme_settings_alter(&$form, $form_state, $form_i
       '!jquery_update' => 'https://drupal.org/project/jquery_update',
     )),
   );
-
-  // Advanced settings.
-  $form['mysetting'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('My setting'),
-    '#group' => 'bootstrap',
-  );
-  $form['mysetting']['background'] = array(
-    '#type' => 'managed_file',
-    '#title' => t('Background'),
-    '#required' => FALSE,
-    '#preview' => TRUE,
-    '#upload_location' => file_default_scheme() . '://theme/backgrounds/',
-    '#default_value' => theme_get_setting('background'),
-    '#upload_validators' => array(
-      'file_validate_extensions' => array('gif png jpg jpeg'),
-    ),
-  );
-
-  // Перезберігаємо картинку, якщо їй присвоєно статус "тимчасово".
-  $image_custom_index = theme_get_setting('background');
-  if ($image_custom_index) {
-    // Грузимо нашу картинку.
-    $file = file_load($image_custom_index);
-    if ($file) {
-      // Якщо статус дійсно "тимчасова", то ...
-      if ($file->status == 0) {
-        // Вставнолюємо нормальний статус
-        $file->status = FILE_STATUS_PERMANENT;
-        // Зберігаємо наш файл.
-        file_save($file);
-      }
-    }
-  }
-
-  //ВИдаляємо картинки, які не використовуються цим полем
-  $replace_text = 'public://theme/backgrounds';
-  //Робимо вибірку fids, для цього поля
-  $fids = db_select('file_managed', 'n')
-    ->fields('n', array('fid'))
-    ->condition('n.uri', '%' . db_like($replace_text) . '%', 'LIKE')
-    ->execute()
-    ->fetchCol();
-
-  //грузимо всі файли
-  $files = file_load_multiple($fids);
-
-  //виаляємо ті, які зара не використовуються
-  foreach($files as $file) {
-    if ($file->fid != $image_custom_index) {
-      file_delete($file);
-    }
-  }
 
   // BootstrapCDN.
   bootstrap_cdn_provider_settings_form($form, $form_state, $theme);

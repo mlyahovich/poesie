@@ -1,8 +1,13 @@
-(function($, fileManager) {
+/**
+ * @file
+ * IMCE file manager for Managed File.
+ */
+
+(function ($, fileManager) {
   'use strict';
 
-  ManagedFile.implement(fileManager, function(manager, triggeringElement) {
-    window[manager.fileManagerID] = function(imce_window) {
+  ManagedFile.implement(fileManager, function (manager, triggeringElement) {
+    window[manager.fileManagerID] = function (imce_window) {
       var imce = imce_window.imce;
 
       // In case, when IMCE call this method, the "filename" parameter will
@@ -10,7 +15,7 @@
       // selected data will be cleared at this moment. Otherwise, when user
       // clicks on the "Insert file" button, the "filename" parameter will
       // have the "true" value and "lastFid" method returns necessary value.
-      imce.send = function(filename) {
+      imce.send = function (filename) {
         filename = imce.lastFid() || filename;
 
         // The "filename" can be "true" here only if a user clicks

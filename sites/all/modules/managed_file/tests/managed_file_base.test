@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Managed File Base (Test).
@@ -58,14 +59,14 @@ class ManagedFileBase extends \DrupalWebTestCase {
    *
    * @param string|array $name
    *   Field name.
-   * @param string|int $value
+   * @param mixed|null $value
    *   Field value.
    *
    * @return bool
    *   TRUE on pass, FALSE on fail.
    */
-  protected function assertField($name, $value = NULL) {
-    return $this->assertFieldByXpath(sprintf("//*[@name='%s']", $this->elementName($name)), $value);
+  protected function assertFieldValue($name, $value = NULL) {
+    return $this->assertFieldByXpath($this->getFieldXpath($name), $value);
   }
 
   /**
@@ -73,14 +74,14 @@ class ManagedFileBase extends \DrupalWebTestCase {
    *
    * @param string|array $name
    *   Field name.
-   * @param string|int $value
+   * @param mixed|null $value
    *   Field value.
    *
    * @return bool
    *   TRUE on pass, FALSE on fail.
    */
-  protected function assertNoField($name, $value = NULL) {
-    return $this->assertNoFieldByXpath(sprintf("//*[@name='%s']", $this->elementName($name)), $value);
+  protected function assertNoFieldValue($name, $value = NULL) {
+    return $this->assertNoFieldByXpath($this->getFieldXpath($name), $value);
   }
 
   /**
@@ -91,9 +92,7 @@ class ManagedFileBase extends \DrupalWebTestCase {
    * $this->elementName(); // menu_image
    * $this->elementName('upload_button'); // menu_image_upload_button
    * $this->elementName('[fid]'); // menu_image[fid]
-   * @endcode
    *
-   * @code
    * $this->useElementParents = TRUE;
    * $this->elementName(); // options[menu_image]
    * $this->elementName('upload_button'); // options_menu_image_upload_button
@@ -149,6 +148,19 @@ class ManagedFileBase extends \DrupalWebTestCase {
       ->range(1, 1)
       ->execute()
       ->fetchField();
+  }
+
+  /**
+   * Returns field XPath.
+   *
+   * @param string $name
+   *   Field name.
+   *
+   * @return string
+   *   Field XPath.
+   */
+  private function getFieldXpath($name) {
+    return sprintf("//*[@name='%s']", $this->elementName($name));
   }
 
 }
