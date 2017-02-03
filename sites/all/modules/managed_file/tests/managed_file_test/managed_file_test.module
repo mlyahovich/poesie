@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Managed File (Test).
@@ -45,5 +46,7 @@ function managed_file_test_form(array $form, array &$form_state) {
  * Implements hook_form_submit().
  */
 function managed_file_test_form_submit(array $form, array &$form_state) {
-  managed_file_element_submit($form['managed_file_test'], $form_state, ['managed_file_test', 'file', 1]);
+  managed_file_element_submit($form['managed_file_test'], $form_state, [
+    'managed_file_test', 'file', 1,
+  ]);
 }

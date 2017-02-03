@@ -5,9 +5,9 @@ core = 7.x
 
 dependencies[] = managed_file
 
-; Information added by Drupal.org packaging script on 2016-02-11
-version = "7.x-1.1"
+; Information added by Drupal.org packaging script on 2017-01-29
+version = "7.x-1.2"
 core = "7.x"
 project = "managed_file"
-datestamp = "1455191055"
+datestamp = "1485720187"
 

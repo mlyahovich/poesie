@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Menu callbacks.
@@ -8,7 +9,6 @@
  * Menu callback.
  *
  * @internal
- *
  * @see managed_file_menu()
  */
 function managed_file_get_fid_by_uri() {

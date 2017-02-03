@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Auxiliary functionality.
@@ -48,15 +49,14 @@ function managed_file_element_widgets() {
 /**
  * Process widget of managed file.
  *
- * @internal
- *
- * @see managed_file_element_info_alter()
- *
  * @param array $element
  *   Form element to process.
  *
  * @return array
  *   Processed element.
+ *
+ * @internal
+ * @see managed_file_element_info_alter()
  */
 function managed_file_element_process(array $element) {
   if (!empty($element['#widget'])) {
@@ -134,10 +134,6 @@ function managed_file_element_process(array $element) {
 /**
  * Determine the value of managed file element.
  *
- * @internal
- *
- * @see managed_file_element_info_alter()
- *
  * @param array $element
  *   Form element.
  * @param array|bool $input
@@ -147,6 +143,9 @@ function managed_file_element_process(array $element) {
  *
  * @return string[]|int
  *   An array with "style" and "fid" keys or file ID.
+ *
+ * @internal
+ * @see managed_file_element_info_alter()
  */
 function managed_file_element_value(array &$element, $input, array $form_state) {
   if (!isset($element['#default_value'])) {
@@ -242,13 +241,13 @@ function managed_file_element_value(array &$element, $input, array $form_state) 
 /**
  * Add image preview to managed file.
  *
- * @internal
- *
  * @param array $element
  *   Form element to process.
  *
  * @return array
  *   Processed element.
+ *
+ * @internal
  */
 function managed_file_element_preview(array $element) {
   if (empty($element['#file'])) {
