@@ -149,7 +149,7 @@ function rznasa_preprocess_node(&$variables)
 
     $variables['content']['social_block'] = array(
       '#markup' => drupal_render($variables['social']),
-      '#weight' => 0,
+      '#weight' => -100,
     );
   }
 }
