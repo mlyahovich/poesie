@@ -43,3 +43,4 @@ sites/simpletest
 core/phpcs.xml
 core/phpunit.xml
 .idea/
+temp
