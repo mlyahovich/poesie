@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Defines a field for attaching country-specific addresses to entities.
+ */
+
+/**
+ * Implements hook_block_view_alter
+ * @param $data
+ * @param $block
+ */
+function add_card_text_block_view_alter(&$data, $block) {
+
+	/**
+	 * For block under product (social buttons).
+	 * http://donreach.com/social-share-buttons
+	 */
+	if($block->delta == '11'){
+
+		$get = explode('/',$_GET['q']);
+		$nid = $get[1];
+		$node = node_load($nid);
+		$path = drupal_lookup_path('alias', $_GET['q'], null);
+		$ln = $node->language;
+
+		$current_path = current_path();
+
+//		$style_name = '450x460';
+
+//		$sku = $node->field_product['und'][0]['product_id'];
+//		$product = commerce_product_load_by_sku($sku);
+//		$image = $product->field_image['und'][0]['uri'];
+//		$image_uri = image_style_path($style_name, $image);
+//		$image_url = file_create_url($image_uri);
+
+		$menu_item = menu_get_item();
+
+
+		$res_url = 'http://'.$_SERVER['HTTP_HOST'].'/'.$path;
+
+		$html =<<<html
+<div class="don-share" data-url="{$current_path}" data-image="" data-style="icons" >
+    <div class="don-share-vk"></div>
+    <div class="don-share-facebook"></div>
+    <div class="don-share-twitter"></div>
+    <div class="don-share-google"></div>
+    <div class="don-share-linkedin"></div>
+    <div class="don-share-odnoklassniki"></div>
+    <div class="don-share-mailru"></div>
+  </div>
+html;
+
+		$data['content'] = $html;
+
+	};
+
+}

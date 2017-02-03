@@ -1,0 +1,621 @@
+
+body.html{
+	background-image: url('/themes/corolla/img/background.png') !important;
+}
+
+#branding {
+	padding: 15px 0;
+}
+
+.with-logo .region-header{
+	padding: 15px 0;
+}
+
+#main-content h1#page-title{
+    border-bottom: 1px solid #dddddd;
+    padding: 0 0 25px;
+    color: #e76921;
+    font-size: 28px;
+    font-family: fira sans, andika ,comfortaa !important;
+    text-align: center;
+}
+
+.node-content .field-name-body{
+    font-size: 18px;
+}
+
+
+#edit-comment-body-und-0-value{
+    width: 700px;
+}
+
+#comments{
+    margin: 15px auto 0;
+    width: 700px;
+    display: none;
+}
+
+.node-content .field-item{
+    font-family: fira sans, andika ,comfortaa !important;
+}
+                                        /*Блок коментарів*/
+.group_social {
+    border-bottom: 2px solid #53af3a;
+    margin: 60px auto 0;
+    width: 700px;
+}
+
+.add_com_vk, .add_com_site, .add_com_fb {
+    background-color: #53af3a;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: normal;
+    height: 26px;
+    margin: 0 auto;
+    padding: 8px 17px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    top: 2px;
+    width: auto;
+}
+
+.add_com {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #a2d43b 0%, #689a01 100%) repeat scroll 0 0;
+    border-color: #88c900 -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid none none;
+    border-width: 1px medium medium;
+    box-shadow: 0 2px 0 -1px rgba(255, 255, 255, 0.5) inset, 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    color: #ffffff !important;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: andika;
+    font-weight: bold;
+    height: 26px;
+    margin: 0 auto;
+    padding: 8px 17px !important;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 1px rgba(52, 100, 119, 0.05), 0 1px 1px rgba(0, 0, 0, 0.2);
+    top: 19px;
+    width: 300px;
+}
+
+.node-verse .field-type-image {
+    background-image: url("/themes/corolla/img/rside.jpg");
+    background-position: 589px -12px;
+    background-repeat: no-repeat;
+    background-size: 31% auto;
+    margin: 0 auto;
+}
+
+.node-verse .field-name-field-verse-img .field-items{
+    background-image: url("/themes/corolla/img/rside.jpg");
+    background-position: 202px 0;
+    background-repeat: no-repeat;
+    background-size: 31% auto;
+}
+
+.node-verse .field-name-field-verse-img img{
+    border-radius: 5px;
+    box-shadow: 0 2px 6px 0 #8f7c76;
+}
+
+/*Головна блок з віршами*/
+
+.view-last-verse-block .views-row {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 32%;
+    margin-bottom: 60px;
+}
+
+.view-last-verse-block .views-field-name,
+.view-last-verse-block .views-field-created{
+    display: inline-block;
+    color: #bebebe;
+}
+
+.view-last-verse-block{
+    font-family: fira sans, andika ,comfortaa !important;
+    font-size: 15px;
+}
+
+.view-last-verse-block .views-field-title a{
+    font-weight: bold;
+}
+.view-last-verse-block .views-field-title a:hover{
+    color: #086782;
+    text-decoration: underline;
+}
+
+.view-last-verse-block .views-field-view-node{
+    text-align: right;
+    padding-right: 40px;
+}
+
+.view-last-verse-block .views-field-view-node a{
+    color: #e25401;
+    text-decoration: underline;
+}
+.view-last-verse-block .views-field-view-node a:hover{
+    text-decoration: none;
+}
+
+.view-last-verse-block .views-field-title{
+    height: 50px;
+}
+
+.view-last-verse-block .views-field-field-boby {
+    background-image: url("/themes/corolla/img/topverse.png");
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: 61% auto;
+    margin: 13px auto 0;
+    padding: 40px 0 0;
+}
+
+
+.view-last-verse-block .views-row-2 .views-field-field-boby {
+    border-left: 1px dashed #dddddd;
+    border-right: 1px dashed #dddddd;
+}
+
+#block-views-last-verse-block-block h2 ,
+#block-views-last-news-block-block h2{
+    color: #846650;
+    font-size: 29px;
+    margin: 0 0 20px;
+    font-family: fira sans, andika ,comfortaa !important;
+}
+
+/*новини  блок головна*/
+#block-views-last-news-block-block{
+    font-family: fira sans, andika ,comfortaa !important;
+}
+
+.view-last-news-block img ,
+.view-id-news img {
+    float: left;
+    height: 193px;
+    padding: 0 20px 0 0;
+    width: auto;
+}
+
+.view-last-news-block .views-row ,
+.view-id-news .views-row {
+    border-top: 1px dashed #bbbbbb;
+    clear: both;
+    padding: 34px 0;
+}
+
+.view-last-news-block .views-row-last{
+    border-bottom: 1px dashed #bbbbbb;
+}
+
+.view-last-news-block .views-row-1 ,
+.view-id-news .views-row-1 {
+    clear: both;
+    padding:0 0 34px 0;
+    border-top: none;
+}
+
+.view-last-news-block .views-field-title,
+.view-id-news .views-field-title{
+    font-size: 24px;
+}
+
+.view-last-news-block .views-field-view-node,
+.view-id-news .views-field-view-node{
+    float: right;
+}
+
+#more_news{
+    float: right;
+    font-size: 22px;
+    font-family: fira sans, andika ,comfortaa !important;
+}
+#more_news a{
+    color: #e25401;
+    text-decoration: underline;
+}
+
+#more_news a:hover{
+    text-decoration: none;
+}
+
+#footer-panels-wrapper{
+    background-color: #815936;
+    color: white;
+    box-shadow: 0 -2px 7px #775737;
+}
+
+
+#footer-panels-wrapper a{
+    color: white;
+}
+
+#footer-panels-wrapper a:hover{
+    text-decoration: underline;
+}
+
+#footer-panels-wrapper li{
+    list-style: none;
+}
+
+#virshi_foot {
+
+    font-family: fira sans, andika, comfortaa !important;
+    font-size: 20px;
+}
+
+#copyfoot {
+    bottom: -233px;
+    display: inline-block;
+    font-family: fira sans,andika,comfortaa !important;
+    margin: -18px 0 0 25%;
+    position: relative;
+}
+
+#logofoot {
+    background-image: url("/sites/default/files/logo.png");
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: 81% auto;
+    display: inline-block;
+    height: 130px;
+    position: relative;
+    right: -52%;
+    top: 60px;
+    width: 349px;
+}
+
+#block-block-4 h2{
+    font-family: fira sans, andika, comfortaa !important;
+    color: white;
+    font-size: 28px;
+}
+
+#footer-wrapper{
+    display: none;
+}
+
+#block-block-7{
+    height: 200px;
+    transform: rotate(11grad);
+}
+
+ul.pager{
+    padding: 50px 0 0 0;
+}
+
+ul.pager a{
+    padding: 15px !important;
+    font-size: 20px;
+}
+
+ul.pager li.pager-current{
+    padding: 15px !important;
+    font-size: 20px;
+    background-color: #815936;
+    color: #fff;
+}
+
+ul.pager a:hover{
+    background-color: #815936;
+    color: #fff;
+}
+
+ul.pager a:hover{
+    color: #fff;
+}
+
+
+
+.view-header {
+    border-bottom: 1px solid #d3d3d3;
+    font-family: bad script,fira sans,andika,comfortaa !important;
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 15px 0 30px;
+    padding: 0 0 26px;
+}
+
+
+
+
+
+
+.view-myserve .views-row,
+.view-allverse .views-row,
+.view-ukraine .views-row,
+.view-modernity .views-row,
+.view-life .views-row,
+.view-love .views-row,
+.view-women .views-row,
+.view-reflections .views-row,
+.view-from-childhood .views-row {
+    display: inline-block;
+    padding: 0 30px;
+
+}
+
+.view-ukraine .view-content,
+.view-allverse .view-content,
+.view-modernity .view-content,
+.view-life .view-content,
+.view-love .view-content,
+.view-women .view-content,
+.view-reflections .view-content,
+.view-from-childhood .view-content,
+.view-myserve .view-content {
+    text-align: center;
+}
+.view-ukraine .views-field-title a,
+.view-allverse .views-field-title a,
+.view-modernity .views-field-title a,
+.view-life .views-field-title a,
+.view-love .views-field-title a,
+.view-women .views-field-title a,
+.view-reflections .views-field-title a,
+.view-from-childhood .views-field-title a,
+.view-myserve .views-field-title a{
+    font-size: 20px;
+    font-family: fira sans, andika ,comfortaa !important;
+}
+
+.view-ukraine .views-field-title a:hover,
+.view-allverse .views-field-title a:hover,
+.view-modernity .views-field-title a:hover,
+.view-life .views-field-title a:hover,
+.view-love .views-field-title a:hover,
+.view-women .views-field-title a:hover,
+.view-reflections .views-field-title a:hover,
+.view-from-childhood .views-field-title a:hover,
+.view-myserve .views-field-title a:hover{
+    text-decoration: underline;
+}
+
+.view-ukraine .views-row:hover .views-field-field-verse-img img,
+.view-allverse .views-row:hover .views-field-field-verse-img img,
+.view-modernity .views-row:hover .views-field-field-verse-img img,
+.view-life .views-row:hover .views-field-field-verse-img img,
+.view-love .views-row:hover .views-field-field-verse-img img,
+.view-women .views-row:hover .views-field-field-verse-img img,
+.view-reflections .views-row:hover .views-field-field-verse-img img,
+.view-from-childhood .views-row:hover .views-field-field-verse-img img,
+.view-myserve .views-row:hover .views-field-field-verse-img img{
+    transition: all 0.3s ease;
+    opacity: 0.3;
+}
+
+.view-ukraine .views-field-field-verse-img img,
+.view-allverse .views-field-field-verse-img img,
+.view-modernity .views-field-field-verse-img img,
+.view-life .views-field-field-verse-img img,
+.view-love .views-field-field-verse-img img,
+.view-women .views-field-field-verse-img img,
+.view-reflections .views-field-field-verse-img img,
+.view-from-childhood .views-field-field-verse-img img,
+.view-myserve .views-field-field-verse-img img{
+    border-radius: 10px;
+}
+
+.view-ukraine .views-row:hover .views-field-field-defolt-icon,
+.view-allverse .views-row:hover .views-field-field-defolt-icon,
+.view-modernity .views-row:hover .views-field-field-defolt-icon,
+.view-life .views-row:hover .views-field-field-defolt-icon,
+.view-love .views-row:hover .views-field-field-defolt-icon,
+.view-women .views-row:hover .views-field-field-defolt-icon,
+.view-reflections .views-row:hover .views-field-field-defolt-icon,
+.view-from-childhood .views-row:hover .views-field-field-defolt-icon,
+.view-myserve .views-row:hover .views-field-field-defolt-icon{
+    transition: all 0.5s ease;
+    opacity: 1;
+    transform: translateY(-100px);
+}
+
+.view-ukraine .views-field-field-verse-img a,
+.view-allverse .views-field-field-verse-img a,
+.view-modernity .views-field-field-verse-img a,
+.view-life .views-field-field-verse-img a,
+.view-love .views-field-field-verse-img a,
+.view-women .views-field-field-verse-img a,
+.view-reflections .views-field-field-verse-img a,
+.view-from-childhood .views-field-field-verse-img a,
+.view-myserve .views-field-field-verse-img a {
+    display: inline-flex;
+    background-color: #76521d;
+    border-radius: 10px;
+}
+
+.view-ukraine .views-field-field-defolt-icon,
+.view-allverse .views-field-field-defolt-icon,
+.view-modernity .views-field-field-defolt-icon,
+.view-life .views-field-field-defolt-icon,
+.view-love .views-field-field-defolt-icon,
+.view-women .views-field-field-defolt-icon,
+.view-reflections .views-field-field-defolt-icon,
+.view-from-childhood .views-field-field-defolt-icon,
+.view-myserve .views-field-field-defolt-icon{
+    opacity: 0;
+    transition: all 0.2s ease;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.view-ukraine .views-field-field-defolt-text,
+.view-allverse .views-field-field-defolt-text,
+.view-modernity .views-field-field-defolt-text,
+.view-life .views-field-field-defolt-text,
+.view-love .views-field-field-defolt-text,
+.view-women .views-field-field-defolt-text,
+.view-reflections .views-field-field-defolt-text,
+.view-from-childhood .views-field-field-defolt-text,
+.view-myserve .views-field-field-defolt-text {
+    color: #ffffff;
+    font-family: Lobster;
+    font-size: 25px;
+    margin: -30px 0 0;
+    opacity: 0;
+    text-shadow: 2px 3px #000000;
+    transform: translateY(43px);
+    transition: all 0.3s ease 0s;
+}
+
+.view-ukraine .views-row:hover .views-field-field-defolt-text,
+.view-allverse .views-row:hover .views-field-field-defolt-text,
+.view-modernity .views-row:hover .views-field-field-defolt-text,
+.view-life .views-row:hover .views-field-field-defolt-text,
+.view-love .views-row:hover .views-field-field-defolt-text,
+.view-women .views-row:hover .views-field-field-defolt-text,
+.view-reflections .views-row:hover .views-field-field-defolt-text,
+.view-from-childhood .views-row:hover .views-field-field-defolt-text,
+.view-myserve .views-row:hover .views-field-field-defolt-text{
+    opacity: 0;
+}
+
+
+.comment-submitted{
+    font-size: 10px;
+    font-family: verdana, arial, sans-serif;
+    color: #BCBCBC;
+}
+
+
+div.addthis_button_nasa {
+    clear: both;
+    padding-top: 15px;
+	line-height: 40px;
+}
+div.addthis_button_nasa a.addthis_button_vk span:first-child {
+    background: #5e7ba3 none repeat scroll 0 0;
+    border-color: #567094;
+    border-radius: 7px;
+    display: inline-block;
+    height: 40px;
+    text-indent: 0;
+    width: 180px;
+}
+div.addthis_button_nasa a.addthis_button_facebook span:first-child {
+    background: #5262b7 none repeat scroll 0 0;
+    border-color: #4b5aa6;
+    border-radius: 7px;
+    display: inline-block;
+    height: 40px;
+    text-indent: 0;
+    width: 180px;
+}
+
+div.addthis_button_nasa a.addthis_button_vk, div.addthis_button_nasa a.addthis_button_facebook {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Tahoma","Geneva",sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+div.addthis_button_nasa a.addthis_button_vk span.at-icon-wrapper,
+div.addthis_button_nasa a.addthis_button_facebook span.at-icon-wrapper{
+	height: 41px !important;
+	width: 199px !important;
+
+}
+
+div.addthis_button_nasa a.addthis_button_vk span.at-icon-wrapper svg,
+div.addthis_button_nasa a.addthis_button_facebook span.at-icon-wrapper svg{
+	display: none;
+}
+
+div.addthis_button_nasa a.addthis_button_vk span:first-child::before {
+    content: "Розказати Вконтакті";
+    position: relative;
+    top: 11px;
+    vertical-align: super;
+}
+div.addthis_button_nasa .addthis_button_facebook span:first-child::before {
+    content: "Розказати у Фейсбуці";
+    position: relative;
+    top: 11px;
+    vertical-align: super;
+}
+
+div.addthis_button_nasa a.addthis_button_vk span:hover,
+div.addthis_button_nasa .addthis_button_facebook span:hover{
+    background-color: #79001c !important;
+}
+
+.node-verse p{
+    margin: 0;
+    padding: 0;
+    text-align: left !important;
+}
+
+.node-verse p{
+    margin: 20px 0;
+    padding: 0;
+    text-align: left !important;
+}
+
+.node-verse .field-name-field-boby div{
+    text-align: left !important;
+}
+
+
+.view-last-verse-block .views-field-field-verse-img img:hover{
+    opacity: 0.8;
+    box-shadow: 2px 3px 4px 2px #bbbbbb;
+}
+
+.view-last-verse-block .views-field-field-verse-img img{
+    box-shadow: 2px 3px 4px 2px #bbbbbb;
+    border-radius: 3px;
+}
+
+
+#node-4 .field-name-field-article-img {
+    display: inline-block;
+    float: left;
+    padding: 7px 24px 0 0;
+}
+
+#node-4 .field-name-field-article-img figure {
+    padding: 0;
+}
+
+#vk_like{
+    vertical-align: super;
+    display: inline-block;
+    margin: 0 0 0 50px;
+}
+
+.fb-like{
+	display: inline;
+}
+
+div.fb-like span{
+    vertical-align: super !important;
+}
+
+div.fb-comments span{
+    width: 700px !important;
+}
+
+div.fb-comments iframe{
+    width: 700px !important;
+}
+
+
+a.addthis_button_vk > span{
+	margin: 0 20px;
+}

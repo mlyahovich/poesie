@@ -1,0 +1,542 @@
+@import "compass";
+
+a,
+a:active,
+a:focus {
+  outline: none !important;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* =========================================================================
+ *   FRONT PAGE
+ * ========================================================================= */
+
+
+
+body,
+body.page-taxonomy {
+  h2.block-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 33px;
+    margin: 30px 0 15px;
+  }
+
+  /* Header */
+  header#navbar {
+    border: 0;
+    border-radius: 0;
+    height: 550px;
+    background-attachment: fixed;
+    background-clip: border-box, border-box;
+    background-color: #ffffff;
+    background-image: url("../img/parallax1.jpg"), none;
+    background-origin: padding-box, padding-box;
+    background-position: 0 0%, center top;
+    background-repeat: repeat, no-repeat;
+    background-size: cover;
+    padding-bottom: 55px;
+
+    .top-menu {
+      background-color: rgba(164, 164, 164, 0.5);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.52);
+      padding: 0;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+
+
+      .navbar-header {
+        .logo {
+          img {
+            width: 100%;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+          }
+        }
+      }
+      .navbar-collapse {
+        padding: 58px 0 0;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        nav {
+          ul.menu {
+            li {
+              a {
+                transition: all 0.05s ease 0s;
+                color: #fff;
+                font-size: 16px;
+                &:hover {
+                  color: #5bffec;
+                }
+
+                &[aria-expanded='true'] {
+                  background-color: #fff;
+                  color: #5bffec;
+                  border-right: 1px solid #e3e3e3;
+                  border-left: 1px solid #e3e3e3;
+                }
+              }
+
+              &.active {
+                a {
+                  color: #5bffec;
+                  background-color: transparent;
+                }
+              }
+
+              ul.dropdown-menu {
+                border-right: 1px solid #e3e3e3;
+                border-bottom: 1px solid #e3e3e3;
+                border-left: 1px solid #e3e3e3;
+                border-top: 0;
+                box-shadow: none;
+                li {
+                  a {
+                    color: #2bb79d;
+                  }
+                }
+              }
+
+              &.open {
+                a {
+                  border-radius: 5px 0 0;
+                }
+              }
+
+              &:not(.open) {
+                a.dropdown-toggle {
+                  margin: 0 1px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .site-name-header {
+      text-align: center;
+      -webkit-transition: all .3s ease-in-out;
+      -moz-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      h1 a {
+        float: none;
+        font-family: 'Roboto Slab', serif;
+        font-size: 45px;
+        color: #fff;
+      }
+      h2 {
+        color: #26dac3;
+        font-size: 43px;
+        font-weight: 100;
+        text-shadow: 1px 1px 1px #777;
+      }
+    }
+  }
+
+  /*Last verse and recomendet verse*/
+
+  .view-last-verse-block,
+  .view-view-taxonomy {
+    div[class*='col-'] {
+      position: relative;
+      margin-bottom: 30px;
+
+      &:nth-child(1),
+      &:nth-child(6n+1) {
+        .title {
+          background-color: #f59b29;
+        }
+      }
+      &:nth-child(2),
+      &:nth-child(6n+2) {
+        .title {
+          background-color: #a8157d;
+        }
+      }
+      &:nth-child(3),
+      &:nth-child(6n+3) {
+        .title {
+          background-color: #563993;
+        }
+      }
+      &:nth-child(4),
+      &:nth-child(6n+4) {
+        .title {
+          background-color: #077cbf;
+        }
+      }
+      &:nth-child(5),
+      &:nth-child(6n+5) {
+        .title {
+          background-color: #f59b29;
+        }
+      }
+      &:nth-child(6),
+      &:nth-child(6n+6) {
+        .title {
+          background-color: #a8157d;
+        }
+      }
+    }
+
+    .image {
+      img {
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+        }
+      }
+    }
+
+    .title {
+      background-image: url("../img/home-img.png");
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      > span {
+        color: #fff;
+        display: block;
+        font-size: 13px;
+        overflow: hidden;
+        padding: 24px 10px;
+        text-align: center;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        white-space: nowrap;
+        width: 100%;
+
+        a {
+          color: #fff;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .date {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      > span {
+        padding: 0 15px 0 0;
+        color: #fff;
+        opacity: 0.5;
+      }
+    }
+
+  }
+
+  /* Last news */
+  .view-last-news-block {
+    .view-content {
+      font-size: 0;
+      > div[class*='col-'] {
+        position: relative;
+        margin-bottom: 30px;
+        display: inline-block;
+        vertical-align: top;
+        float: none;
+        .title {
+          a {
+            color: #b73333;
+            font-size: 18px;
+          }
+        }
+        .body {
+          font-size: 14px;
+        }
+        .date {
+          text-align: right;
+          opacity: 0.5;
+          font-size: 14px
+        }
+        .read-more {
+          text-align: right;
+          a {
+            font-size: 14px;
+            color: #b73333;
+          }
+        }
+      }
+    }
+    .view-footer {
+      a {
+        font-family: 'Roboto Slab', serif;
+        color: #2bb79d;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+/* =========================================================================
+ *   Fixed menu
+ * ========================================================================= */
+body.f-nav {
+  header#navbar {
+    .top-menu.f-nav {
+      padding: 5px 0 !important;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: rgba(38, 38, 38, 0.95);
+      z-index: 9999 !important;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+
+      .navbar-header {
+        a.logo {
+          padding: 0;
+          margin: 0;
+          img {
+            width: 54%;
+          }
+        }
+      }
+
+      .navbar-collapse {
+        padding: 15px 0 0;
+      }
+    }
+    .site-name-header {
+      margin-top: 185px;
+    }
+  }
+  &.f-nav {
+    header#navbar {
+      padding-top: 75px;
+    }
+  }
+}
+
+body.front.admin-menu {
+  header#navbar {
+    .f-nav {
+      top: 28px;
+    }
+  }
+}
+
+body.f-nav.node-type-webform ,
+body.f-nav.page-verse-all ,
+body.f-nav.node-type-article {
+  .site-name-header {
+    margin-top: 100px !important;
+  }
+}
+
+body.f-nav.node-type-verse {
+  .site-name-header {
+    margin-top: 34px !important;
+  }
+}
+
+/* =========================================================================
+ *   Taxonomy page
+ * ========================================================================= */
+
+body.page-taxonomy-term {
+  header#navbar {
+    background-attachment: fixed;
+    background-clip: border-box, border-box;
+    background-color: #ffffff;
+    background-image: url("../img/parallax1.jpg"), none;
+    background-origin: padding-box, padding-box;
+    background-position: 0 100%, center top !important;
+    background-repeat: repeat, no-repeat;
+    background-size: cover;
+    height: 430px;
+    padding-bottom: 55px;
+    .site-name-header {
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      h1 {
+        float: none;
+        font-family: 'Roboto Slab', serif;
+        font-size: 50px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* =========================================================================
+ *   Node page
+ * ========================================================================= */
+
+body.page-verse-all {
+  header#navbar {
+    height: 300px;
+    h1 {
+      color: #fff;
+    }
+  }
+}
+
+body.node-type-verse {
+  header#navbar {
+    background-attachment: fixed;
+    background-clip: border-box, border-box;
+    background-color: #ffffff;
+    background-image: url("../img/parallax1.jpg"), none;
+    background-origin: padding-box, padding-box;
+    background-position: 0 100%, center top !important;
+    background-repeat: repeat, no-repeat;
+    background-size: cover;
+    height: auto;
+    padding-bottom: 55px;
+    .site-name-header {
+      .container {
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 40%;
+        padding: 0 5px;
+        .breadcrumb {
+          text-align: left;
+          margin: 0 -5px;
+          border-radius: 0;
+        }
+        .body {
+          padding-bottom: 50px;
+          display: inline-block;
+          text-align: left;
+
+          * {
+            text-align: left !important;
+          }
+        }
+      }
+      h1 {
+        float: none;
+        font-family: 'Open Sans', serif;
+        font-size: 50px;
+        color: #2f3236;
+      }
+    }
+  }
+  #block-block-11 {
+    h2.block-title {
+      margin: 0 0 40px;
+    }
+    h2.comments {
+      margin: 80px 0 0;
+      font-family: "Roboto Slab",serif;
+      font-size: 33px;
+    }
+  }
+
+  #vk_like,
+  #fb-like {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  #disqus_thread {
+    margin: 30px 0 0;
+  }
+
+  #block-block-11 h2.block-title,
+  h2.comments {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #208b9d;
+  }
+}
+
+
+/* =========================================================================
+ *   Article page
+ * ========================================================================= */
+body.node-type-article {
+  header#navbar {
+    height: 300px;
+  }
+  .field-name-body {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================================
+ *   Webform page
+ * ========================================================================= */
+body.node-type-webform {
+  header#navbar {
+    height: 300px;
+  }
+}
+
+.view .text-center {
+  clear: both;
+  .pagination {
+    li {
+      span,
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+
+/* =========================================================================
+ *   Footer
+ * ========================================================================= */
+footer.footer {
+  padding: 20px 15px 100px;
+  background-color: #2f3236;
+  h2 {
+    color: #fff;
+  }
+  .views-field-name {
+    span {
+      a {
+        color: #a6a6a6;
+        font-size: 18px;
+        &:hover {
+          color: #5bffec;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .view-footer {
+    a {
+      color: #a6a6a6;
+      font-size: 18px;
+      padding: 5px 0 0;
+      display: inline-block;
+      &:hover {
+        color: #5bffec;
+        text-decoration: none;
+      }
+    }
+  }
+  div[class*='col-'] {
+    padding: 0;
+    margin: 5px 0;
+  }
+}
+
+/* =========================================================================
+ *   User page
+ * ========================================================================= */
+.page-user header#navbar,
+body.page-admin header#navbar{
+  height: 300px;
+}
+
+@import "component/media";

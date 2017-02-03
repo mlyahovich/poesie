@@ -1,0 +1,14 @@
+name = Bootstrap Library
+description = Register Boostrap as a library by installing files in /sites/all/libraries/bootstrap.
+package = Bootstrap
+core = 7.x
+
+dependencies[] = libraries
+
+
+; Information added by Drupal.org packaging script on 2015-06-17
+version = "7.x-1.4+4-dev"
+core = "7.x"
+project = "bootstrap_library"
+datestamp = "1434558781"
+
