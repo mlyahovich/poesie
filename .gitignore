@@ -46,3 +46,4 @@ core/phpunit.xml
 temp
 dump.sql
 cache
+sites/all/themes/rznasa/.sass-cache
