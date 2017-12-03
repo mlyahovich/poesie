@@ -82,7 +82,15 @@ function rznasa_block_view_alter(&$data, $block)
 
 html;
 
-    $data['content'] = $html;
+$html_after_vk_blocked = <<<html
+  <!--Лайки фейсбук-->
+  <div class="fb-like col-sm-6" data-href="{$res_url}" data-layout="button_count" data-action="like" size="large" data-size="large" data-show-faces="true" data-share="false"></div>
+
+  <h2 class="comments">{$comment_text}</h2>
+
+html;
+
+    $data['content'] = $html_after_vk_blocked;
 
   };
 
