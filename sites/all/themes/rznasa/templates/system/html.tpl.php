@@ -75,7 +75,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&subset=cyrillic,cyrillic-ext" rel="stylesheet">
 
   <!-- vk like -->
-  <script src="//vk.com/js/api/openapi.js?122" type="text/javascript"></script>
+  <!-- todo no access -->
+  <!-- <script src="//vk.com/js/api/openapi.js?122" type="text/javascript"></script> -->
 
   <!-- скріпт для віджетів FB -->
   <div id="fb-root"></div>
@@ -105,7 +106,7 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
-  
+
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

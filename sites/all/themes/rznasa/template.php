@@ -40,8 +40,9 @@ function rznasa_block_view_alter(&$data, $block)
   /**
    * For block under product (social buttons).
    * http://donreach.com/social-share-buttons
+   * todo remote FALSE
    */
-  if ($block->delta == '11') {
+  if ($block->delta == '11' && FALSE) {
 
     $path = drupal_lookup_path('alias', $_GET['q'], null);
 
@@ -139,8 +140,8 @@ function rznasa_preprocess_page(&$variables)
 function rznasa_preprocess_node(&$variables)
 {
 
-  if ($variables['node']->type == 'verse') {
-    //$rr = $variables;
+  // todo remove FALSE
+  if ($variables['node']->type == 'verse' && FALSE) {
 
     $variables['test'] = $variables['content']['disqus'];
     $variables['social'] = _block_get_renderable_array(_block_render_blocks(array(
