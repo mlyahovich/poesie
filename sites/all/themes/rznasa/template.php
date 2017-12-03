@@ -42,7 +42,7 @@ function rznasa_block_view_alter(&$data, $block)
    * http://donreach.com/social-share-buttons
    * todo remote FALSE
    */
-  if ($block->delta == '11' && FALSE) {
+  if ($block->delta == '11') {
 
     $path = drupal_lookup_path('alias', $_GET['q'], null);
 
