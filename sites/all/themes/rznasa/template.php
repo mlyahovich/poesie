@@ -149,7 +149,7 @@ function rznasa_preprocess_node(&$variables)
 {
 
   // todo remove FALSE
-  if ($variables['node']->type == 'verse' && FALSE) {
+  if ($variables['node']->type == 'verse') {
 
     $variables['test'] = $variables['content']['disqus'];
     $variables['social'] = _block_get_renderable_array(_block_render_blocks(array(
